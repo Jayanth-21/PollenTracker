@@ -14,7 +14,11 @@ function formatWind(value, unit) {
   return `${Math.round(Number(value))} ${unit || "mph"}`;
 }
 
-export default function CurrentConditionsCard({ pollenToday, weather, regionCode }) {
+export default function CurrentConditionsCard({
+  pollenToday,
+  weather,
+  locationLabel,
+}) {
   const level = pollenToday?.dayLevel || "LOW";
   const maxIndex =
     typeof pollenToday?.maxIndex === "number" ? pollenToday.maxIndex : "—";
@@ -30,8 +34,11 @@ export default function CurrentConditionsCard({ pollenToday, weather, regionCode
       >
         Current conditions
       </h2>
-      {regionCode ? (
-        <p className="mt-1 text-xs text-slate-500">Region: {regionCode}</p>
+      {locationLabel ? (
+        <p className="mt-1 text-xs text-slate-600">
+          <span className="font-medium text-slate-500">Location: </span>
+          {locationLabel}
+        </p>
       ) : null}
 
       <dl className="mt-6 grid gap-4 sm:grid-cols-3">

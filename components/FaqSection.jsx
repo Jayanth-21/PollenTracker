@@ -4,8 +4,8 @@ const ITEMS = [
     a: "Pollen levels and daily forecasts are requested from the Google Pollen API for your coordinates. Coverage varies by region.",
   },
   {
-    q: "Why do I need to share my location?",
-    a: "The site uses your browser location to request a local forecast. If you deny permission, we cannot automatically pick coordinates.",
+    q: "Do I have to share my location?",
+    a: "No. You can search for a city or place instead. If you allow location, we use your coordinates for a nearby forecast; otherwise pick a place from search results.",
   },
   {
     q: "What is the Universal Pollen Index (UPI)?",
